@@ -42,7 +42,7 @@ function App() {
   const [chainCount, setChainCount] = useState<number | null>(null)
   const [apiTimeout, setApiTimeout] = useState<number | null>(null)
   const lastApiTimeoutRef = useRef<number | null>(null)
-  const [lastFetch, setLastFetch] = useState<Date | null>(null)
+  // const [lastFetch, setLastFetch] = useState<Date | null>(null)
   const [showApiSettings, setShowApiSettings] = useState(false)
 
   const audioContextRef = useRef<AudioContext | null>(null)
@@ -132,7 +132,7 @@ function App() {
 
       if (data.chain) {
         setApiError(null)
-        setLastFetch(new Date())
+        // setLastFetch(new Date())
         setChainCount(data.chain.current)
 
         const rawTimeout = data.chain.timeout
